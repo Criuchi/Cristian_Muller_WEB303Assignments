@@ -1,30 +1,5 @@
 // WEB303 Assignment 2
-
-
-
-/*  $(function(){
-    $("#prospect").on('click', function(){
-        request();
-    });
-
-/* });
-
-function request(){
- var xhr = new XMLHttpRequest;
- xhr.open('GET','prospect.html',true);
- xhr.onload = function()
- {
-  if(this.status=== 200)
-  {
-    let el = document.getElementById("content");
-  
-    el.innerHTML=xhr.responseText;
- 
-  }
- }   
-  xhr.send();
-}  */ 
-
+// Cristian Muller - 0785530
 
 $(function() {    
     $('#prospect').on('click', function() {
@@ -34,6 +9,10 @@ $(function() {
     $('#convert').on('click', function() {
         request1();
     });
+
+    $('#retain').on('click', function() {
+        request2();
+    });
 });
 
 function request(){
@@ -42,18 +21,14 @@ function request(){
 
         xhr.onload = function() {
             if (xhr.status === 200) {
-                // Animate the #content div to hide it
                 $('#content').fadeOut('fast', function() {
-                // Replace the content with the loaded HTML
                 $('#content').html(xhr.responseText);
-                // Animate the #content div to show the new content
                 $('#content').fadeIn('fast');
             });
         } 
     }
-    // Send the request
-    xhr.send();
 
+    xhr.send();
 };
 
 function request1(){
@@ -61,15 +36,29 @@ function request1(){
     xhr1.open('GET','convert.html', true);
 
     xhr1.onload = function() {
-        if (xhr1.status === 200) {
-            $('#content').fadeOut('fast', function() {
-            $('#content').html(xhr1.responseText);
-            $('#content').fadeIn('fast');
-        });
-    } 
-}
+            if (xhr1.status === 200) {
+                $('#content').fadeOut('fast', function() {
+                $('#content').html(xhr1.responseText);
+                $('#content').fadeIn('fast');
+            });
+        } 
+    }
 
-xhr1.send();
-
+    xhr1.send();
 };
 
+function request2(){
+    var xhr2 = new XMLHttpRequest();
+    xhr2.open('GET','retain.html', true);
+
+    xhr2.onload = function() {
+            if (xhr2.status === 200) {
+                $('#content').fadeOut('fast', function() {
+                $('#content').html(xhr2.responseText);
+                $('#content').fadeIn('fast');
+            });
+        } 
+    }
+
+    xhr2.send();
+};
