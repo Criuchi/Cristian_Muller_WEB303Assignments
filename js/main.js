@@ -1,9 +1,8 @@
 // WEB303 Assignment 2
 // Cristian Muller - 0785530
 
-
 $(function() {    
-    //Load the html pages after clicking
+    // load the html pages after clicking
     $('#prospect').on('click', function() {
         request();
     });
@@ -26,6 +25,7 @@ function request(){
             if (xhr.status === 200) {
                 $('#content').fadeOut('fast', function() {
                 $('#content').html(xhr.responseText);
+                $('#content').fadeIn('fast');
             });
         } 
     }
@@ -42,6 +42,7 @@ function request1(){
             if (xhr1.status === 200) {
                 $('#content').fadeOut('fast', function() {
                 $('#content').html(xhr1.responseText);
+                $('#content').fadeIn('fast');
             });
         } 
     }
@@ -58,6 +59,7 @@ function request2(){
             if (xhr2.status === 200) {
                 $('#content').fadeOut('fast', function() {
                 $('#content').html(xhr2.responseText);
+                $('#content').fadeIn('fast');
             });
         } 
     }
