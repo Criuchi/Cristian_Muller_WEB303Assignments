@@ -2,7 +2,7 @@
 
 
 
- $(function(){
+/*  $(function(){
     //Creating the method to replace the value of #amount
     $("#prospect").on('click', function(){
         request();
@@ -24,10 +24,10 @@ function request(){
   }
  }   
   xhr.send();
-} 
+}  */
 
 
-/*    document.addEventListener("DOMContentLoaded", function () {
+    document.addEventListener("DOMContentLoaded", function () {
     var contentDiv = document.getElementById('content');
 
     function loadContent(url) {
@@ -71,4 +71,4 @@ function request(){
             });
         });
     });
-});  */
+});  
