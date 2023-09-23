@@ -27,10 +27,10 @@ function request(){
 }  */
 
 
-    document.addEventListener("DOMContentLoaded", function () {
-    var contentDiv = document.getElementById('content');
+    $(function(){
+    var content = document.getElementById('content');
 
-    function loadContent(url) {
+    function request() {
         var xhr = new XMLHttpRequest();
         xhr.open('GET', url, true);
 
@@ -44,7 +44,7 @@ function request(){
     }
 
     function animateContent(newContent) {
-        $(contentDiv).fadeOut(500, function () {
+        $(content).fadeOut(500, function () {
             $(this).html(newContent).fadeIn(500);
         });
     }
@@ -52,7 +52,7 @@ function request(){
     // Handle clicks on links
     var links = document.querySelectorAll('a');
     links.forEach(function (link) {
-        link.addEventListener('click', function (e) {
+        link.on('click', function (e) {
             e.preventDefault();
 
             var contentFile;
@@ -65,9 +65,9 @@ function request(){
                 contentFile = 'retain.html';
             }
 
-            $(contentDiv).fadeOut(500, function () {
+            $(content).fadeOut(500, function () {
                 $(this).html('');
-                loadContent(contentFile);
+                request(contentFile);
             });
         });
     });
