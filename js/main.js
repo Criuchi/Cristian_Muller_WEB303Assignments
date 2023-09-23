@@ -26,10 +26,13 @@ function request(){
 }  */ 
 
 
-$(function() {
-    
+$(function() {    
     $('#prospect').on('click', function() {
         request();
+    });
+
+    $('#convert').on('click', function() {
+        request1();
     });
 });
 
@@ -48,8 +51,25 @@ function request(){
             });
         } 
     }
-
     // Send the request
     xhr.send();
 
 };
+
+function request1(){
+    var xhr1 = new XMLHttpRequest();
+    xhr1.open('GET','convert.html', true);
+
+    xhr1.onload = function() {
+        if (xhr1.status === 200) {
+            $('#content').fadeOut('fast', function() {
+            $('#content').html(xhr1.responseText);
+            $('#content').fadeIn('fast');
+        });
+    } 
+}
+
+xhr1.send();
+
+};
+
