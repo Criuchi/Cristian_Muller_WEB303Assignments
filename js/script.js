@@ -56,7 +56,7 @@ function requestAjax() {
                     // Append the elements to the #team div
                     $("#team").append(teamName, teamPosition, teamBio);
                 });
-            }); 
+            },3000); 
         },
 
         error: function() {
