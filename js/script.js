@@ -3,10 +3,10 @@
 
 $(document).ready(function() {
     // Function for $.getJSON
-      requestJSON();
+    //  requestJSON();
 
     // Function for $.ajax
-    //    requestAjax();
+        requestAjax();
 });
 
 
