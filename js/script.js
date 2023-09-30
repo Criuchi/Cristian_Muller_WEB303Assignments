@@ -3,10 +3,10 @@
 
 $(document).ready(function() {
     // Function for $.getJSON
-    //  requestJSON();
+      requestJSON();
 
     // Function for $.ajax
-        requestAjax();
+    //    requestAjax();
 });
 
 
@@ -33,12 +33,8 @@ function requestAjax() {
         type: "GET",
         timeout: 3000,
 
-        beforeSend: function() {                                // Before Ajax 
-            $("#team").text("Loading...");     // Load message
-        },
-
-        complete: function() {                                  // Once finished
-            $('#team').remove();                                  // Clear message
+        beforeSend: function() {                               
+            $("#team").text("Loading...");    
         },
 
         success: function(data) {
