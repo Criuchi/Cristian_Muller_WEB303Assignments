@@ -28,18 +28,22 @@ function requestJSON() {
 
 // Function for $.ajax request
 function requestAjax() {
-
-    $("#team").text("Loading...");
     $.ajax({
         url: "team.json",
         type: "GET",
-        dataType: "json",
         timeout: 3000,
-        success: function(data) {
 
+        beforeSend: function() {                                // Before Ajax 
+            $("#team").text("Loading...");     // Load message
+        },
+
+        complete: function() {                                  // Once finished
+            $('#team').remove();                                  // Clear message
+        },
+
+        success: function(data) {
             // Delay content display for 3 seconds
             setTimeout(function() {
-                $("#team").empty();
 
                 // Loop through the array in the returned object
                 $.each(data, function(index, teamMember) {
@@ -54,6 +58,7 @@ function requestAjax() {
                 });
             }); 
         },
+
         error: function() {
             // Display error message }
             $("#team").text("Error: Content could not be retrieved.");
