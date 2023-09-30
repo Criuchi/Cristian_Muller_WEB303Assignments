@@ -37,11 +37,10 @@ function requestAjax() {
             $("#team").text("Loading...");    
         },
 
-        complete: function() {                                  // Once finished
-            $('#team').empty();                                  // Clear message
-        },
-
         success: function(data) {
+            // Clear loading message
+            $('#team').empty();  
+
             // Delay content display for 3 seconds
             setTimeout(function() {
 
