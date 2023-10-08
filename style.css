@@ -2,6 +2,7 @@
 #weatherApp{
     margin: auto;
     max-width: 600px;
+    background-color: lightskyblue;
     background-image: url("../Cristian_Muller_WEB303Assignments/img/cloud.avif");
     background-size: cover;
     background-repeat: no-repeat;
