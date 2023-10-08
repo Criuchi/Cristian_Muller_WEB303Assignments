@@ -1,0 +1,70 @@
+
+#weatherApp{
+    margin: auto;
+    max-width: 600px;
+    background-image: url("../JS_Assignment4/img/cloud.avif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    text-align: center;
+    border: groove 6px black;
+    border-radius: 2%;
+}
+
+h1{
+    color: rgb(255, 255, 255);
+    letter-spacing: 1px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 20px;
+    margin-bottom: 5px;
+}
+
+h2{
+    color: white;
+    text-decoration: underline;
+    letter-spacing: 1px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+
+p{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bolder;
+    font-size: 20px;
+    color: white;
+    margin-right: 5px;
+    letter-spacing: 1px;
+}
+
+input{
+    border: solid black 2px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    padding: 2px;
+}
+
+button{
+    padding: 5px;
+    border: 3px black solid;
+}
+
+button:hover{
+    background-color: rgb(207, 207, 207);
+}
+
+#weather-container{
+    background:
+        linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+        linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+        linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+        linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+        linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+        linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+        background-color: #131313;
+        background-size: 20px 20px;
+
+    margin-top: 20px;
+    color: white;
+    padding: 5px;
+    border: 5px groove black;
+}
